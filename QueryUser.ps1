@@ -1,5 +1,10 @@
 $rawUserQuery=(query user)
 $columnNames=("USERNAME", "SESSIONNAME", "ID", "STATE", "IDLE TIME", "LOGON TIME")
+
+# $rawUserQuery=(query session)
+# ColumnNames for query session command.
+# $columnNames=("SESSIONNAME", "USERNAME", "ID", "STATE", "TYPE", "DEVICE")
+
 # The modifier below was introduced to correct the ID field since the ID number is anchored to the right side and expands to the left.  Thanks Microsoft.
 # The maximum ID value is 65536, so the ID column override needs to be 5 digits long.
 $columnStartModifier=(0, 0, -5, 0, 0, 0) # USERNAME, SESSIONNAME, ID, STATE, IDLE TIME, LOGON TIME
